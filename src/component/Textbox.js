@@ -20,21 +20,21 @@ const Textbox = () => {
         setTodo('')
     }
 
-    const handleDeleteTodo = (Todo) => {
+    const handleDeleteTodo = useCallback((Todo) => {
         console.log('button delete to do')
         const arrDeleteTodo = todoList.filter((todo) => todo.Todo !== Todo)
         setTodoList(arrDeleteTodo)
         setTodo('')
-    }
+    }, [todoList])
 
-    const handleUpdateTodo = (Todo) => {
+    const handleUpdateTodo = useCallback((Todo) => {
         console.log('button Edit to do')
         let index = todoList.findIndex((todo) => todo.Todo === Todo)
         setTodo(todoList[index].Todo)
         !buttonSwitch && setTodo('')
         setButtonSwitch(!buttonSwitch)
         setIndex(index)
-    }
+    }, [todoList, buttonSwitch])
 
     const handleFixTodo = () => {
         console.log('button sua todo')
