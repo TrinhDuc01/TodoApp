@@ -2,11 +2,16 @@
 import '../App.css';
 import Textbox from './Textbox';
 
+
 function App() {
+
   return (
     <div className="App">
-      THINGS TO DO
-      <Textbox/>
+      <div>
+        THINGS TO DO
+      </div>
+      <Textbox />
+
     </div>
   );
 }
