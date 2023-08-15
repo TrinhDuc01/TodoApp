@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div className='Heading'>
         THINGS TO DO
       </div>
       <Textbox />

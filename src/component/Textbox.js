@@ -17,7 +17,7 @@ const Textbox = () => {
             ...todoList,
             { Todo: todo }
         ]);
-        setTodo('')
+        setTodo('');
     }
 
     const handleDeleteTodo = useCallback((Todo) => {
